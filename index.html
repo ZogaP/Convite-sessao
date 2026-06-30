@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença - Sessão Magna de Exaltação</title>
+    <meta name="description" content="Confirme sua presença na Sessão Magna de Exaltação da A.R.L.S. José Gonçalves da Silva nº 4586.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="decor-border"></div>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="sr-only">Sessão Magna de Exaltação - A.R.L.S. José Gonçalves da Silva nº 4586</h1>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="main-grid">
+            <!-- Left Side: Invitation View -->
+            <section class="invitation-section">
+                <div class="card invitation-card">
+                    <div class="invitation-wrapper">
+                        <img src="Masonic Invitation with Logo at Top Center (3).png" alt="Convite Oficial - Sessão Magna de Exaltação" class="invitation-img">
+                    </div>
+                    <div class="quick-info">
+                        <div class="info-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <div>
+                                <h3>Data</h3>
+                                <p>05 de Julho (05/07)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <h3>Horário</h3>
+                                <p>08:00</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h3>Local</h3>
+                                <p>Rua Dilson Antônio Legentil, 33 - Flamengo, Maricá - RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://maps.google.com/?q=Rua+Dilson+Antônio+Legentil,+33+-+Flamengo+-+Maricá" target="_blank" class="btn btn-outline" id="btn-maps">
+                            <i class="fa-solid fa-map-location-dot"></i> Como Chegar
+                        </a>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sessão+Magna+de+Exaltação+-+ARLS+José+Gonçalves+da+Silva&dates=20260705T110000Z/20260705T140000Z&details=Sessão+Magna+de+Exaltação+dos+Irmãos+Hugo+Silva+Viana+e+Geraldo+João+Nepomuceno+Júnior.&location=Rua+Dilson+Antônio+Legentil,+33+-+Flamengo+-+Maricá" target="_blank" class="btn btn-outline" id="btn-calendar">
+                            <i class="fa-regular fa-calendar-plus"></i> Adicionar à Agenda
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Side: RSVP Form -->
+            <section class="rsvp-section">
+                <div class="card rsvp-card">
+                    <div class="card-header">
+                        <h2>Confirmação de Presença</h2>
+                        <p>Por favor, preencha os dados abaixo para confirmar sua participação nos trabalhos.</p>
+                    </div>
+
+                    <form id="rsvp-form" class="rsvp-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user input-icon"></i>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loja">Loja Maçônica e Nº</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-gavel input-icon"></i>
+                                <input type="text" id="loja" name="loja" placeholder="Ex: José Gonçalves da Silva nº 4586">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cim">CIM (Cadastro de Identificação Maçônica)</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-id-card input-icon"></i>
+                                <input type="text" id="cim" name="cim" placeholder="Digite seu CIM (máx. 10 números)" maxlength="10" inputmode="numeric" pattern="\d*">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Você comparecerá ao evento? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="presenca" value="sim" checked required>
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-text"><i class="fa-regular fa-circle-check text-success"></i> Sim, confirmarei presença</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="presenca" value="nao">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-text"><i class="fa-regular fa-circle-xmark text-danger"></i> Infelizmente não poderei</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="acompanhantes-group">
+                            <label for="acompanhantes">Nº de Acompanhantes</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-users input-icon"></i>
+                                <select id="acompanhantes" name="acompanhantes">
+                                    <option value="0">Nenhum (irei sozinho)</option>
+                                    <option value="1">1 Acompanhante</option>
+                                    <option value="2">2 Acompanhantes</option>
+                                    <option value="3">3 Acompanhantes</option>
+                                    <option value="4">4 Acompanhantes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="observacoes">Observações ou Mensagem</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-comment input-icon textarea-icon"></i>
+                                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Restrições alimentares, dúvidas ou saudações..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit">
+                            Confirmar Presença <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="success-message" class="success-message hidden">
+                        <div class="success-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3>Confirmação Recebida!</h3>
+                        <p id="success-text">Sua presença foi confirmada com sucesso. Agradecemos e nos vemos no evento!</p>
+                        <button type="button" class="btn btn-outline btn-block" id="btn-reset">
+                            Enviar outra confirmação
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 A.R.L.S. José Gonçalves da Silva nº 4586. Todos os direitos reservados.</p>
+            <button id="btn-admin-trigger" class="btn-admin-trigger" title="Painel Administrativo">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </footer>
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-shield-halved"></i> Painel de Convidados</h2>
+                <button type="button" class="btn-close" id="btn-close-modal">&times;</button>
+            </div>
+            
+            <!-- Admin Login Section -->
+            <div id="admin-login-section" class="admin-login-section">
+                <p>Insira a senha de acesso para visualizar a lista de confirmados.</p>
+                <form id="admin-login-form">
+                    <div class="form-group">
+                        <label for="admin-password">Senha de Acesso</label>
+                        <input type="password" id="admin-password" placeholder="Digite a senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Acessar Painel</button>
+                </form>
+                <p id="login-error" class="text-danger hidden">Senha incorreta. Tente novamente.</p>
+            </div>
+
+            <!-- Admin Dashboard Section (hidden by default) -->
+            <div id="admin-dashboard-section" class="admin-dashboard-section hidden">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <span class="stat-num" id="stat-total-presencas">0</span>
+                        <span class="stat-label">Confirmados</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" id="stat-total-acompanhantes">0</span>
+                        <span class="stat-label">Acompanhantes</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" id="stat-total-recusas">0</span>
+                        <span class="stat-label">Declinaram</span>
+                    </div>
+                </div>
+
+                <div class="table-actions">
+                    <button type="button" class="btn btn-outline btn-sm" id="btn-export-csv">
+                        <i class="fa-solid fa-file-csv"></i> Exportar CSV
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" id="btn-clear-data">
+                        <i class="fa-solid fa-trash-can"></i> Limpar Lista
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Loja / Nº</th>
+                                <th>CIM</th>
+                                <th>Status</th>
+                                <th>Acomp.</th>
+                                <th>Obs.</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody id="guest-list-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <!-- Firebase SDK Compat (para websites estáticos simples) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
